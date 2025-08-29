@@ -144,16 +144,12 @@ struct ContentView: View {
     
     private var headerSection: some View {
         VStack(spacing: 8) {
-            // Maruti Suzuki Logo (placeholder - you can replace with actual logo)
-            Image(systemName: "car.fill")
-                .font(.system(size: 40))
-                .foregroundColor(.blue)
+            // Maruti Suzuki Logo
+            Image("MarutiLogo")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(height: 60)
                 .padding(.top, 20)
-            
-            Text("Maruti Suzuki")
-                .font(.title2)
-                .fontWeight(.bold)
-                .foregroundColor(.primary)
             
             Text("Official Info (India)")
                 .font(.caption)
