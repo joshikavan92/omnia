@@ -24,7 +24,15 @@ final class LocationManager: NSObject, ObservableObject, CLLocationManagerDelega
 
         // Location
         locationManager.delegate = self
-        locationManager.requestWhenInUseAuthorization()
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.allowsBackgroundLocationUpdates = true
+        locationManager.pausesLocationUpdatesAutomatically = false
+        locationManager.showsBackgroundLocationIndicator = true
+        
+        // Request Always authorization
+        locationManager.requestAlwaysAuthorization()
+        
+        // Start location updates
         locationManager.startUpdatingLocation()
 
         // Load Managed App Config once
@@ -90,10 +98,32 @@ final class LocationManager: NSObject, ObservableObject, CLLocationManagerDelega
         guard let location = locations.last else { return }
         latitude = location.coordinate.latitude
         longitude = location.coordinate.longitude
+        print("Location updated: \(latitude), \(longitude)")
     }
 
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print("Location error: \(error.localizedDescription)")
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        switch status {
+        case .notDetermined:
+            print("Location authorization: Not determined")
+        case .restricted, .denied:
+            print("Location authorization: Restricted/Denied")
+            alertMessage = "Location access denied"
+        case .authorizedWhenInUse:
+            print("Location authorization: When in use")
+            alertMessage = "Location access: When in use only"
+        case .authorizedAlways:
+            print("Location authorization: Always")
+            alertMessage = "Location access: Always"
+            // Enable background updates when we get Always permission
+            locationManager.allowsBackgroundLocationUpdates = true
+            locationManager.startUpdatingLocation()
+        @unknown default:
+            print("Location authorization: Unknown status")
+        }
     }
 }
 
