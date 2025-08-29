@@ -1,0 +1,128 @@
+2025-08-28 17:50:50 +0000  Initial pipeline context: <IDEDistributionProcessingPipelineContext: 0xafd022400; archive(resolved)="<IDEArchive: 0xb1b3cf640>", distributionTask(resolved)="2", distributionDestination(resolved)="1", distributionMethod(resolved)="<IDEDistributionMethodDevelopmentSigned: 0xb14adbdc0>", team(resolved)="<IDEProvisioningDisambiguatableBasicTeam: 0xb09931780; teamID='L9GM633593', teamName='Kavankumar Joshi', teamType='Individual', username='joshikavan92@gmail.com', isFreeProvisioningTeam='0'>">
+	Chain (15, self inclusive):
+	<IDEDistributionProcessingPipelineContext: 0xafd022400; archive = "<IDEArchive: 0xb1b3cf640>", distributionMethod="<IDEDistributionMethodDevelopmentSigned: 0xb14adbdc0>", team="<IDEProvisioningDisambiguatableBasicTeam: 0xb09931780; teamID='L9GM633593', teamName='Kavankumar Joshi', teamType='Individual', username='joshikavan92@gmail.com', isFreeProvisioningTeam='0'>">
+	<IDEDistributionProcessingPipelineContext: 0xafd021b00; archive = "<IDEArchive: 0xb1b3cf640>", distributionMethod="<IDEDistributionMethodDevelopmentSigned: 0xb14adbdc0>", team="<IDEProvisioningDisambiguatableBasicTeam: 0xb09931780; teamID='L9GM633593', teamName='Kavankumar Joshi', teamType='Individual', username='joshikavan92@gmail.com', isFreeProvisioningTeam='0'>">
+	<IDEDistributionContext: 0xafd911e00; archive = "<IDEArchive: 0xb1b3cf640>", distributionMethod="<IDEDistributionMethodDevelopmentSigned: 0xb14adbdc0>", team="<IDEProvisioningDisambiguatableBasicTeam: 0xb09931780; teamID='L9GM633593', teamName='Kavankumar Joshi', teamType='Individual', username='joshikavan92@gmail.com', isFreeProvisioningTeam='0'>">
+	<IDEDistributionContext: 0xb08aaaa80; archive = "<IDEArchive: 0xb1b3cf640>", distributionMethod="<IDEDistributionMethodDevelopmentSigned: 0xb14adbdc0>", team="<IDEProvisioningDisambiguatableBasicTeam: 0xb09931780; teamID='L9GM633593', teamName='Kavankumar Joshi', teamType='Individual', username='joshikavan92@gmail.com', isFreeProvisioningTeam='0'>">
+	<IDEDistributionContext: 0xafe733980; archive = "<IDEArchive: 0xb1b3cf640>", distributionMethod="<IDEDistributionMethodDevelopmentSigned: 0xb14adbdc0>", team="<IDEProvisioningDisambiguatableBasicTeam: 0xb09931780; teamID='L9GM633593', teamName='Kavankumar Joshi', teamType='Individual', username='joshikavan92@gmail.com', isFreeProvisioningTeam='0'>">
+	<IDEDistributionContext: 0xaf4011b80; archive = "<IDEArchive: 0xb1b3cf640>", distributionMethod="<IDEDistributionMethodDevelopmentSigned: 0xb14adbdc0>", team="<IDEProvisioningDisambiguatableBasicTeam: 0xb09931780; teamID='L9GM633593', teamName='Kavankumar Joshi', teamType='Individual', username='joshikavan92@gmail.com', isFreeProvisioningTeam='0'>">
+	<IDEDistributionContext: 0xb01969b80; archive = "<IDEArchive: 0xb1b3cf640>", distributionMethod="<IDEDistributionMethodDevelopmentSigned: 0xb14adbdc0>", team="<IDEProvisioningDisambiguatableBasicTeam: 0xb09931780; teamID='L9GM633593', teamName='Kavankumar Joshi', teamType='Individual', username='joshikavan92@gmail.com', isFreeProvisioningTeam='0'>">
+	<IDEDistributionContext: 0xb01dbb200; archive = "<IDEArchive: 0xb1b3cf640>", distributionMethod="<IDEDistributionMethodDevelopmentSigned: 0xb14adbdc0>", team="<IDEProvisioningDisambiguatableBasicTeam: 0xb09931780; teamID='L9GM633593', teamName='Kavankumar Joshi', teamType='Individual', username='joshikavan92@gmail.com', isFreeProvisioningTeam='0'>">
+	<IDEDistributionContext: 0xb07db5900; archive = "<IDEArchive: 0xb1b3cf640>", distributionMethod="<IDEDistributionMethodDevelopmentSigned: 0xb14adbdc0>", team="<IDEProvisioningDisambiguatableBasicTeam: 0xb09931780; teamID='L9GM633593', teamName='Kavankumar Joshi', teamType='Individual', username='joshikavan92@gmail.com', isFreeProvisioningTeam='0'>">
+	<IDEDistributionContext: 0xb01dbe080; archive = "<IDEArchive: 0xb1b3cf640>", distributionMethod="<IDEDistributionMethodDevelopmentSigned: 0xb14adbdc0>", team="(null)">
+	<IDEDistributionContext: 0xb01dbd900; archive = "<IDEArchive: 0xb1b3cf640>", distributionMethod="<IDEDistributionMethodDevelopmentSigned: 0xb14adbdc0>", team="(null)">
+	<IDEDistributionContext: 0xb01dbc500; archive = "<IDEArchive: 0xb1b3cf640>", distributionMethod="<IDEDistributionMethodDevelopmentSigned: 0xb14adbdc0>", team="(null)">
+	<IDEDistributionContext: 0xb09066800; archive = "<IDEArchive: 0xb1b3cf640>", distributionMethod="<IDEDistributionMethodDevelopmentSigned: 0xb14adbdc0>", team="(null)">
+	<IDEDistributionContext: 0xafd910780; archive = "<IDEArchive: 0xb1b3cf640>", distributionMethod="(null)", team="(null)">
+	<IDEDistributionContext: 0xafd913480; archive = "<IDEArchive: 0xb1b3cf640>", distributionMethod="(null)", team="(null)">
+</IDEDistributionProcessingPipelineContext: 0xafd022400>
+2025-08-28 17:50:50 +0000  Processing step: IDEDistributionCreateDestRootStep
+2025-08-28 17:50:50 +0000  Processing step: IDEDistributionCopyItemStep
+2025-08-28 17:50:50 +0000  Running /usr/bin/ditto '-V' '/Users/kavan.joshi/Library/Developer/Xcode/Archives/2025-08-28/Omnia 8-28-25, 11.20 PM.xcarchive/Products/Applications/Omnia.app' '/var/folders/f2/csj7151n4c57d7ny93w4h0s40000gp/T/XcodeDistPipeline.~~~2qs7c0/Root/Payload/Omnia.app'
+2025-08-28 17:50:50 +0000  >>> Copying /Users/kavan.joshi/Library/Developer/Xcode/Archives/2025-08-28/Omnia 8-28-25, 11.20 PM.xcarchive/Products/Applications/Omnia.app 
+2025-08-28 17:50:50 +0000  copying file ./_CodeSignature/CodeResources ... 
+2025-08-28 17:50:50 +0000  2775 bytes for ./_CodeSignature/CodeResources
+2025-08-28 17:50:50 +0000  copying file ./AppIcon60x60@2x.png ... 
+2025-08-28 17:50:50 +0000  8490 bytes for ./AppIcon60x60@2x.png
+2025-08-28 17:50:50 +0000  copying file ./Omnia ... 
+2025-08-28 17:50:50 +0000  143776 bytes for ./Omnia
+2025-08-28 17:50:50 +0000  copying file ./Assets.car ... 
+2025-08-28 17:50:50 +0000  1087224 bytes for ./Assets.car
+2025-08-28 17:50:50 +0000  copying file ./AppIcon76x76@2x~ipad.png ... 
+2025-08-28 17:50:50 +0000  11008 bytes for ./AppIcon76x76@2x~ipad.png
+2025-08-28 17:50:50 +0000  copying file ./embedded.mobileprovision ... 
+2025-08-28 17:50:50 +0000  14271 bytes for ./embedded.mobileprovision
+2025-08-28 17:50:50 +0000  copying file ./Info.plist ... 
+2025-08-28 17:50:50 +0000  1534 bytes for ./Info.plist
+2025-08-28 17:50:50 +0000  copying file ./PkgInfo ... 
+2025-08-28 17:50:50 +0000  8 bytes for ./PkgInfo
+2025-08-28 17:50:50 +0000  /usr/bin/ditto exited with 0
+2025-08-28 17:50:50 +0000  Processing step: IDEDistributionEmbedProfileStep
+2025-08-28 17:50:50 +0000  Processing step: IDEDistributionInfoPlistStep
+2025-08-28 17:50:50 +0000  Skipping step: IDEDistributionInfoPlistStep because it said so
+2025-08-28 17:50:50 +0000  Processing step: IDEDistributionAppThinningPlistStep
+2025-08-28 17:50:50 +0000  Skipping step: IDEDistributionAppThinningPlistStep because it said so
+2025-08-28 17:50:50 +0000  Processing step: IDEDistributionSymbolsStep
+2025-08-28 17:50:50 +0000  Skipping step: IDEDistributionSymbolsStep because it said so
+2025-08-28 17:50:50 +0000  Processing step: IDEDistributionAppThinningStep
+2025-08-28 17:50:50 +0000  Skipping step: IDEDistributionAppThinningStep because it said so
+2025-08-28 17:50:50 +0000  Processing step: IDEDistributionArchThinningStep
+2025-08-28 17:50:50 +0000  Archs to thin for item /Users/kavan.joshi/Library/Developer/Xcode/Archives/2025-08-28/Omnia 8-28-25, 11.20 PM.xcarchive/Products/Applications/Omnia.app are []
+2025-08-28 17:50:50 +0000  Processing step: IDEDistributionODRStep
+2025-08-28 17:50:50 +0000  Processing step: IDEDistributionStripXattrsStep
+2025-08-28 17:50:50 +0000  Skipping stripping extended attributes because the codesign step will strip them.
+2025-08-28 17:50:50 +0000  Processing step: IDEDistributionCodesignStep
+2025-08-28 17:50:50 +0000  Entitlements for <IDEDistributionItem: 0xafe49ba80; bundleID='com.omniaapp.Omnia', path='<DVTFilePath:0xafd905320:'/Users/kavan.joshi/Library/Developer/Xcode/Archives/2025-08-28/Omnia 8-28-25, 11.20 PM.xcarchive/Products/Applications/Omnia.app'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0xafe49a400; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0xb1be2bc00; name='Apple Development: Kavankumar Joshi (962YA473XH)', hash='BF86367F5F55A38D3D5FF1CE4CD8972202C9BD1C', serialNumber='249F8FDD6C7887B575E36946DD3B6585', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2025-05-08 02:15:08 +0000''>', entitlements='{
+    "application-identifier" = "L9GM633593.com.omniaapp.Omnia";
+    "com.apple.developer.team-identifier" = L9GM633593;
+    "get-task-allow" = 1;
+}', teamID='L9GM633593', identifier='com.omniaapp.Omnia', executablePath='<DVTFilePath:0xafd907a20:'/Users/kavan.joshi/Library/Developer/Xcode/Archives/2025-08-28/Omnia 8-28-25, 11.20 PM.xcarchive/Products/Applications/Omnia.app/Omnia'>', hardenedRuntime='0'>'>: {
+    "application-identifier" = "L9GM633593.com.omniaapp.Omnia";
+    "com.apple.developer.team-identifier" = L9GM633593;
+    "get-task-allow" = 1;
+}
+2025-08-28 17:50:50 +0000  Associated App Clip Identifiers Filter: Skipping because "com.apple.developer.associated-appclip-app-identifiers" is not present
+2025-08-28 17:50:50 +0000  Entitlements for <IDEDistributionItem: 0xafe49ba80; bundleID='com.omniaapp.Omnia', path='<DVTFilePath:0xafd905320:'/Users/kavan.joshi/Library/Developer/Xcode/Archives/2025-08-28/Omnia 8-28-25, 11.20 PM.xcarchive/Products/Applications/Omnia.app'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0xafe49a400; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0xb1be28540; name='Apple Development: Kavankumar Joshi (962YA473XH)', hash='BF86367F5F55A38D3D5FF1CE4CD8972202C9BD1C', serialNumber='249F8FDD6C7887B575E36946DD3B6585', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2025-05-08 02:15:08 +0000''>', entitlements='{
+    "application-identifier" = "L9GM633593.com.omniaapp.Omnia";
+    "com.apple.developer.team-identifier" = L9GM633593;
+    "get-task-allow" = 1;
+}', teamID='L9GM633593', identifier='com.omniaapp.Omnia', executablePath='<DVTFilePath:0xafd907a20:'/Users/kavan.joshi/Library/Developer/Xcode/Archives/2025-08-28/Omnia 8-28-25, 11.20 PM.xcarchive/Products/Applications/Omnia.app/Omnia'>', hardenedRuntime='0'>'> are: {
+    "application-identifier" = "L9GM633593.com.omniaapp.Omnia";
+    "com.apple.developer.team-identifier" = L9GM633593;
+    "get-task-allow" = 1;
+}
+2025-08-28 17:50:50 +0000  Writing entitlements for <IDEDistributionItem: 0xafe49ba80; bundleID='com.omniaapp.Omnia', path='<DVTFilePath:0xafd905320:'/Users/kavan.joshi/Library/Developer/Xcode/Archives/2025-08-28/Omnia 8-28-25, 11.20 PM.xcarchive/Products/Applications/Omnia.app'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0xafe49a400; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0xb1be28540; name='Apple Development: Kavankumar Joshi (962YA473XH)', hash='BF86367F5F55A38D3D5FF1CE4CD8972202C9BD1C', serialNumber='249F8FDD6C7887B575E36946DD3B6585', certificateKinds='(
+    "1.2.840.113635.100.6.1.12",
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2025-05-08 02:15:08 +0000''>', entitlements='{
+    "application-identifier" = "L9GM633593.com.omniaapp.Omnia";
+    "com.apple.developer.team-identifier" = L9GM633593;
+    "get-task-allow" = 1;
+}', teamID='L9GM633593', identifier='com.omniaapp.Omnia', executablePath='<DVTFilePath:0xafd907a20:'/Users/kavan.joshi/Library/Developer/Xcode/Archives/2025-08-28/Omnia 8-28-25, 11.20 PM.xcarchive/Products/Applications/Omnia.app/Omnia'>', hardenedRuntime='0'>'> to: /var/folders/f2/csj7151n4c57d7ny93w4h0s40000gp/T/XcodeDistPipeline.~~~2qs7c0/entitlements~~~Z6hBql
+2025-08-28 17:50:50 +0000  invoking codesign: <NSConcreteTask: 0xb1b6baf30; launchPath='/usr/bin/codesign', arguments='(
+    "-f",
+    "-s",
+    BF86367F5F55A38D3D5FF1CE4CD8972202C9BD1C,
+    "--entitlements",
+    "/var/folders/f2/csj7151n4c57d7ny93w4h0s40000gp/T/XcodeDistPipeline.~~~2qs7c0/entitlements~~~Z6hBql",
+    "--preserve-metadata=identifier,flags,runtime,launch-constraints,library-constraints",
+    "--generate-entitlement-der",
+    "--strip-disallowed-xattrs",
+    "-vvv",
+    "/var/folders/f2/csj7151n4c57d7ny93w4h0s40000gp/T/XcodeDistPipeline.~~~2qs7c0/Root/Payload/Omnia.app"
+)'>
+2025-08-28 17:50:50 +0000  codesign output: /var/folders/f2/csj7151n4c57d7ny93w4h0s40000gp/T/XcodeDistPipeline.~~~2qs7c0/Root/Payload/Omnia.app: replacing existing signature
+/var/folders/f2/csj7151n4c57d7ny93w4h0s40000gp/T/XcodeDistPipeline.~~~2qs7c0/Root/Payload/Omnia.app: signed app bundle with Mach-O thin (arm64) [com.omniaapp.Omnia]
+2025-08-28 17:50:50 +0000  Processing step: IDEDistributionZipODRItemStep
+2025-08-28 17:50:50 +0000  Skipping step: IDEDistributionZipODRItemStep because it said so
+2025-08-28 17:50:50 +0000  Processing step: IDEDistributionCreateIPAStep
+2025-08-28 17:50:50 +0000  Running /usr/bin/ditto '-V' '-c' '-k' '--norsrc' '/var/folders/f2/csj7151n4c57d7ny93w4h0s40000gp/T/XcodeDistPipeline.~~~2qs7c0/Root' '/var/folders/f2/csj7151n4c57d7ny93w4h0s40000gp/T/XcodeDistPipeline.~~~2qs7c0/Packages/Omnia.ipa'
+2025-08-28 17:50:50 +0000  >>> Copying /var/folders/f2/csj7151n4c57d7ny93w4h0s40000gp/T/XcodeDistPipeline.~~~2qs7c0/Root 
+2025-08-28 17:50:50 +0000  copying file ./Payload/Omnia.app/_CodeSignature/CodeResources ... 
+2025-08-28 17:50:50 +0000  2775 bytes for ./Payload/Omnia.app/_CodeSignature/CodeResources
+2025-08-28 17:50:50 +0000  copying file ./Payload/Omnia.app/AppIcon60x60@2x.png ... 
+2025-08-28 17:50:50 +0000  8490 bytes for ./Payload/Omnia.app/AppIcon60x60@2x.png
+2025-08-28 17:50:50 +0000  copying file ./Payload/Omnia.app/Omnia ... 
+2025-08-28 17:50:50 +0000  143776 bytes for ./Payload/Omnia.app/Omnia
+2025-08-28 17:50:50 +0000  copying file ./Payload/Omnia.app/Assets.car ... 
+2025-08-28 17:50:50 +0000  1087224 bytes for ./Payload/Omnia.app/Assets.car
+copying file ./Payload/Omnia.app/AppIcon76x76@2x~ipad.png ... 
+2025-08-28 17:50:50 +0000  11008 bytes for ./Payload/Omnia.app/AppIcon76x76@2x~ipad.png
+2025-08-28 17:50:50 +0000  copying file ./Payload/Omnia.app/embedded.mobileprovision ... 
+2025-08-28 17:50:50 +0000  14271 bytes for ./Payload/Omnia.app/embedded.mobileprovision
+copying file ./Payload/Omnia.app/Info.plist ... 
+2025-08-28 17:50:50 +0000  1534 bytes for ./Payload/Omnia.app/Info.plist
+copying file ./Payload/Omnia.app/PkgInfo ... 
+2025-08-28 17:50:50 +0000  8 bytes for ./Payload/Omnia.app/PkgInfo
+2025-08-28 17:50:50 +0000  /usr/bin/ditto exited with 0
+2025-08-28 17:50:50 +0000  Processing step: IDEDistributionAppStoreInformationStep
+2025-08-28 17:50:50 +0000  Skipping step: IDEDistributionAppStoreInformationStep because it said so
+2025-08-28 17:50:50 +0000  Processing step: IDEDistributionGenerateProcessedDistributionItems
+2025-08-28 17:50:50 +0000  IDEDistributionItem init <DVTFilePath:0xafd9f2ee0:'/var/folders/f2/csj7151n4c57d7ny93w4h0s40000gp/T/XcodeDistPipeline.~~~2qs7c0/Root/Payload/Omnia.app'>
+2025-08-28 17:50:50 +0000  Processing step: IDEDistributionCreateManifestStep
