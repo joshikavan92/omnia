@@ -101,11 +101,8 @@ struct ContentView: View {
                     // Hero Section
                     heroSection
                     
-                    // Primary Actions
-                    primaryActionsSection
-                    
-                    // Secondary Actions
-                    secondaryActionsSection
+                    // Contact IT Section
+                    contactITSection
                     
                     // Contact Section
                     contactSection
@@ -113,7 +110,9 @@ struct ContentView: View {
                     // Trust & Safety
                     trustSafetySection
                     
-                    // Device Info Button (hidden but accessible)
+                    Spacer()
+                    
+                    // Device Info Button (bottom right)
                     deviceInfoButton
                 }
             }
@@ -148,13 +147,8 @@ struct ContentView: View {
             Image("MarutiLogo")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-                .frame(height: 60)
+                .frame(height: 40)
                 .padding(.top, 20)
-            
-            Text("Official Info (India)")
-                .font(.caption)
-                .foregroundColor(.secondary)
-                .padding(.bottom, 20)
         }
         .frame(maxWidth: .infinity)
         .background(Color(.systemBackground))
@@ -190,66 +184,37 @@ struct ContentView: View {
         .background(Color(.systemBackground))
     }
     
-    private var primaryActionsSection: some View {
+    private var contactITSection: some View {
         VStack(spacing: 16) {
-            Text("Quick Actions")
+            Text("Contact IT")
                 .font(.headline)
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.horizontal, 20)
             
-            LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 12), count: 2), spacing: 12) {
-                ActionButton(
-                    title: "Book Test Drive",
-                    icon: "car.fill",
-                    color: .blue
-                ) {
-                    // Action for test drive
-                }
+            VStack(spacing: 12) {
+                ContactButton(
+                    title: "IT Support",
+                    icon: "laptopcomputer",
+                    action: { contactITSupport() }
+                )
                 
-                ActionButton(
-                    title: "Get Price List",
-                    icon: "list.bullet",
-                    color: .green
-                ) {
-                    // Action for price list
-                }
+                ContactButton(
+                    title: "System Status",
+                    icon: "chart.bar.fill",
+                    action: { checkSystemStatus() }
+                )
                 
-                ActionButton(
-                    title: "Locate a Dealer",
-                    icon: "location.fill",
-                    color: .orange
-                ) {
-                    // Action for dealer location
-                }
+                ContactButton(
+                    title: "Report Issue",
+                    icon: "exclamationmark.triangle.fill",
+                    action: { reportIssue() }
+                )
                 
-                ActionButton(
-                    title: "Book Service",
-                    icon: "wrench.and.screwdriver.fill",
-                    color: .purple
-                ) {
-                    // Action for service booking
-                }
-            }
-            .padding(.horizontal, 20)
-        }
-        .padding(.vertical, 20)
-        .background(Color(.systemBackground))
-    }
-    
-    private var secondaryActionsSection: some View {
-        VStack(spacing: 16) {
-            Text("Additional Services")
-                .font(.headline)
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .padding(.horizontal, 20)
-            
-            LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 8), count: 3), spacing: 8) {
-                SecondaryActionButton(title: "Insurance", icon: "shield.fill")
-                SecondaryActionButton(title: "Accessories", icon: "car.2.fill")
-                SecondaryActionButton(title: "Parts", icon: "gearshape.fill")
-                SecondaryActionButton(title: "Finance", icon: "creditcard.fill")
-                SecondaryActionButton(title: "Rewards", icon: "star.fill")
-                SecondaryActionButton(title: "Leasing", icon: "doc.text.fill")
+                ContactButton(
+                    title: "Request Access",
+                    icon: "key.fill",
+                    action: { requestAccess() }
+                )
             }
             .padding(.horizontal, 20)
         }
@@ -323,7 +288,7 @@ struct ContentView: View {
         }
         .frame(maxWidth: .infinity, alignment: .trailing)
         .padding(.trailing, 20)
-        .padding(.top, 10)
+        .padding(.bottom, 20)
     }
     
     // MARK: - Actions
@@ -342,6 +307,24 @@ struct ContentView: View {
     
     private func openChat() {
         // Implement chat functionality
+    }
+    
+    // MARK: - IT Contact Functions
+    
+    private func contactITSupport() {
+        // Implement IT support contact
+    }
+    
+    private func checkSystemStatus() {
+        // Implement system status check
+    }
+    
+    private func reportIssue() {
+        // Implement issue reporting
+    }
+    
+    private func requestAccess() {
+        // Implement access request
     }
 
     private func sendDeviceData() {
