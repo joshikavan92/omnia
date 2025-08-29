@@ -273,9 +273,9 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Omnia/Info.plist;
-				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "This app requires location access to track device location for IT management purposes. Location data is used to provide location-based services and device tracking.";
-				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "This app requires background location access to track device location even when the app is not active. This is necessary for continuous device monitoring and IT management.";
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app requires location access to track device location for IT management purposes. Location data is used to provide location-based services and device tracking.";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Omnia Lite requires location access to provide location-based business insights and analytics tracking.";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Omnia Lite requires background location access to provide continuous business insights and analytics tracking even when the app is not active.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Omnia Lite requires location access to provide location-based business insights and analytics tracking.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -287,8 +287,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2;
-				PRODUCT_BUNDLE_IDENTIFIER = com.joshikavan.Omnia.v2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kavankumarjoshi.OmniaLite;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -309,9 +309,9 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Omnia/Info.plist;
-				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "This app requires location access to track device location for IT management purposes. Location data is used to provide location-based services and device tracking.";
-				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "This app requires background location access to track device location even when the app is not active. This is necessary for continuous device monitoring and IT management.";
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app requires location access to track device location for IT management purposes. Location data is used to provide location-based services and device tracking.";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Omnia Lite requires location access to provide location-based business insights and analytics tracking.";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Omnia Lite requires background location access to provide continuous business insights and analytics tracking even when the app is not active.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Omnia Lite requires location access to provide location-based business insights and analytics tracking.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -323,8 +323,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2;
-				PRODUCT_BUNDLE_IDENTIFIER = com.joshikavan.Omnia.v2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kavankumarjoshi.OmniaLite;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
