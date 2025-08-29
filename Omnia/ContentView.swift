@@ -125,9 +125,6 @@ struct ContentView: View {
                     // Contact Section
                     contactSection
                     
-                    // Trust & Safety
-                    trustSafetySection
-                    
                     Spacer()
                     
                     // Device Info Button (bottom right)
@@ -217,21 +214,9 @@ struct ContentView: View {
                 )
                 
                 ContactButton(
-                    title: "System Status",
-                    icon: "chart.bar.fill",
-                    action: { checkSystemStatus() }
-                )
-                
-                ContactButton(
-                    title: "Report Issue",
-                    icon: "exclamationmark.triangle.fill",
-                    action: { reportIssue() }
-                )
-                
-                ContactButton(
-                    title: "Request Access",
+                    title: "Request App",
                     icon: "key.fill",
-                    action: { requestAccess() }
+                    action: { openJamfSelfService() }
                 )
             }
             .padding(.horizontal, 20)
@@ -259,12 +244,6 @@ struct ContentView: View {
                     icon: "envelope.fill",
                     action: { sendEmail() }
                 )
-                
-                ContactButton(
-                    title: "Chat with us",
-                    icon: "message.fill",
-                    action: { openChat() }
-                )
             }
             .padding(.horizontal, 20)
         }
@@ -272,31 +251,7 @@ struct ContentView: View {
         .background(Color(.systemBackground))
     }
     
-    private var trustSafetySection: some View {
-        VStack(spacing: 8) {
-            HStack {
-                Image(systemName: "exclamationmark.triangle.fill")
-                    .foregroundColor(.orange)
-                Text("Caution: Beware of fake promotions or offers.")
-                    .font(.caption)
-                    .foregroundColor(.secondary)
-                Spacer()
-                Button("Know more") {
-                    // Action for more info
-                }
-                .font(.caption)
-                .foregroundColor(.blue)
-            }
-            .padding(.horizontal, 20)
-            
-            Text("Fuelled by innovation, designed for Indian roads since 1983.")
-                .font(.caption2)
-                .foregroundColor(.secondary)
-                .padding(.horizontal, 20)
-        }
-        .padding(.vertical, 16)
-        .background(Color(.systemBackground))
-    }
+
     
     private var deviceInfoButton: some View {
         Button(action: { showDeviceInfo = true }) {
@@ -333,16 +288,18 @@ struct ContentView: View {
         // Implement IT support contact
     }
     
-    private func checkSystemStatus() {
-        // Implement system status check
-    }
-    
-    private func reportIssue() {
-        // Implement issue reporting
-    }
-    
-    private func requestAccess() {
-        // Implement access request
+    private func openJamfSelfService() {
+        // Open Jamf Self Service app
+        if let url = URL(string: "jamfselfservice://") {
+            if UIApplication.shared.canOpenURL(url) {
+                UIApplication.shared.open(url)
+            } else {
+                // Fallback: try to open App Store for Jamf Self Service
+                if let appStoreURL = URL(string: "https://apps.apple.com/app/jamf-self-service/id1234567890") {
+                    UIApplication.shared.open(appStoreURL)
+                }
+            }
+        }
     }
 
     private func sendDeviceData() {
