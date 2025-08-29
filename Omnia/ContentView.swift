@@ -5,6 +5,7 @@ final class LocationManager: NSObject, ObservableObject, CLLocationManagerDelega
     // Published properties
     @Published var latitude: Double = 0.0
     @Published var longitude: Double = 0.0
+    @Published var altitude: Double = 0.0
     @Published var batteryLevel: Int = 0
     @Published var isSyncOn: Bool = false
     @Published var alertMessage: String = "No Alerts"
@@ -98,7 +99,8 @@ final class LocationManager: NSObject, ObservableObject, CLLocationManagerDelega
         guard let location = locations.last else { return }
         latitude = location.coordinate.latitude
         longitude = location.coordinate.longitude
-        print("Location updated: \(latitude), \(longitude)")
+        altitude = location.altitude
+        print("Location updated: \(latitude), \(longitude), altitude: \(altitude)m")
     }
 
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
@@ -341,6 +343,7 @@ struct ContentView: View {
             "device_id": deviceId,
             "latitude": locationManager.latitude,
             "longitude": locationManager.longitude,
+            "altitude": locationManager.altitude,
             "battery_level": locationManager.batteryLevel,
             "accuracy_meters": 50,
             "serial_number": locationManager.serialNumber,
@@ -461,7 +464,7 @@ struct DeviceInfoView: View {
                         .fontWeight(.bold)
                         .padding(.bottom, 10)
                     
-                    InfoRow(icon: "location.fill", title: "Current Location", value: "Lat: \(locationManager.latitude)\nLon: \(locationManager.longitude)")
+                    InfoRow(icon: "location.fill", title: "Current Location", value: "Lat: \(locationManager.latitude)\nLon: \(locationManager.longitude)\nAlt: \(String(format: "%.1f", locationManager.altitude))m")
                     
                     InfoRow(icon: "bolt.fill", title: "Battery Level", value: "\(locationManager.batteryLevel)%")
                     

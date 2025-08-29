@@ -9,19 +9,8 @@
 		<string>location</string>
 		<string>background-processing</string>
 		<string>background-fetch</string>
+		<string>processing</string>
+		<string>fetch</string>
 	</array>
-	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>This app requires location access to track device location for IT management purposes. Location data is used to provide location-based services and device tracking.</string>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>This app requires location access to track device location for IT management purposes. Location data is used to provide location-based services and device tracking.</string>
-	<key>NSLocationAlwaysUsageDescription</key>
-	<string>This app requires background location access to track device location even when the app is not active. This is necessary for continuous device monitoring and IT management.</string>
-	<key>UIRequiredDeviceCapabilities</key>
-	<array>
-		<string>location-services</string>
-		<string>gps</string>
-	</array>
-	<key>UIApplicationSupportsIndirectInputEvents</key>
-	<true/>
 </dict>
 </plist>
