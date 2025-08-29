@@ -7,10 +7,19 @@
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>location</string>
-		<string>background-processing</string>
-		<string>background-fetch</string>
 		<string>processing</string>
 		<string>fetch</string>
 	</array>
+	<key>BGTaskSchedulerPermittedIdentifiers</key>
+	<array>
+		<string>com.kavankumarjoshi.Omnia.v2.refresh</string>
+		<string>com.kavankumarjoshi.Omnia.v2.processing</string>
+	</array>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>This app requires location access to track device location for IT management purposes. Location data is used to provide location-based services and device tracking.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>This app requires location access to track device location for IT management purposes. Location data is used to provide location-based services and device tracking.</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>This app requires background location access to track device location even when the app is not active. This is necessary for continuous device monitoring and IT management.</string>
 </dict>
 </plist>
