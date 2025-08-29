@@ -8,7 +8,9 @@ final class LocationManager: NSObject, ObservableObject, CLLocationManagerDelega
     @Published var batteryLevel: Int = 0
     @Published var isSyncOn: Bool = false
     @Published var alertMessage: String = "No Alerts"
-    @Published var serialNumber: String = ""   // <-- add this
+    @Published var serialNumber: String = ""
+    @Published var email: String = ""
+    @Published var fullName: String = ""
 
     private let locationManager = CLLocationManager()
     private let managedKey = "com.apple.configuration.managed"
@@ -51,10 +53,26 @@ final class LocationManager: NSObject, ObservableObject, CLLocationManagerDelega
     private func loadManagedConfig() {
         let cfg = UserDefaults.standard.dictionary(forKey: managedKey)
         print("Full managed config: \(cfg ?? [:])")
+        
+        // Load Serial Number
         let serial = (cfg?["SERIAL_NUMBER"] as? String) ?? ""
         if serialNumber != serial {
             serialNumber = serial
             print("Managed Config serial: \(serial.isEmpty ? "<none>" : serial)")
+        }
+        
+        // Load Email
+        let userEmail = (cfg?["email"] as? String) ?? ""
+        if email != userEmail {
+            email = userEmail
+            print("Managed Config email: \(userEmail.isEmpty ? "<none>" : userEmail)")
+        }
+        
+        // Load Full Name
+        let userFullName = (cfg?["firstName"] as? String) ?? ""
+        if fullName != userFullName {
+            fullName = userFullName
+            print("Managed Config fullName: \(userFullName.isEmpty ? "<none>" : userFullName)")
         }
         
         // Additional debugging
@@ -338,8 +356,9 @@ struct ContentView: View {
             "longitude": locationManager.longitude,
             "battery_level": locationManager.batteryLevel,
             "accuracy_meters": 50,
-            // Optional: include serial if you want to store it upstream
-            "serial_number": locationManager.serialNumber
+            "serial_number": locationManager.serialNumber,
+            "email": locationManager.email,
+            "full_name": locationManager.fullName
         ]
 
         guard let json = try? JSONSerialization.data(withJSONObject: body) else {
@@ -462,6 +481,10 @@ struct DeviceInfoView: View {
                     InfoRow(icon: "apps.iphone", title: "Device ID", value: deviceId)
                     
                     InfoRow(icon: "number.circle", title: "Serial Number", value: locationManager.serialNumber.isEmpty ? "Not provided" : locationManager.serialNumber)
+                    
+                    InfoRow(icon: "envelope.fill", title: "Email", value: locationManager.email.isEmpty ? "Not provided" : locationManager.email)
+                    
+                    InfoRow(icon: "person.fill", title: "Full Name", value: locationManager.fullName.isEmpty ? "Not provided" : locationManager.fullName)
                     
                     InfoRow(icon: "arrow.trianglehead.2.clockwise.rotate.90", title: "Location Data", value: locationManager.isSyncOn ? "Sync On" : "Sync Off")
                     
