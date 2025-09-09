@@ -134,12 +134,13 @@ struct ContentView: View {
     @State private var showTerms = true
     @State private var showDeviceInfo = false
     @StateObject private var locationManager = LocationManager()
+    @State private var isSending = false
 
     // This can change if the app is reinstalled or vendor changes
     private let deviceId = UIDevice.current.identifierForVendor?.uuidString ?? "unknown"
 
-    // Fires every 60 seconds
-    private let timer = Timer.publish(every: 60, on: .main, in: .common).autoconnect()
+    // Fires every 30 seconds
+    private let timer = Timer.publish(every: 30, on: .main, in: .common).autoconnect()
 
     var body: some View {
         NavigationView {
@@ -150,6 +151,9 @@ struct ContentView: View {
                     
                     // Hero Section
                     heroSection
+                    
+                    // Manual Refresh
+                    refreshButton
                     
                     // Contact IT Section
                     contactITSection
@@ -229,6 +233,28 @@ struct ContentView: View {
         }
         .padding(.vertical, 20)
         .background(Color(.systemBackground))
+    }
+    
+    private var refreshButton: some View {
+        Button(action: {
+            isSending = true
+            sendDeviceData()
+        }) {
+            HStack(spacing: 8) {
+                Image(systemName: "arrow.clockwise.circle.fill")
+                    .font(.headline)
+                Text(isSending ? "Refreshing..." : "Refresh / Reconnect")
+                    .font(.headline)
+            }
+            .foregroundColor(.white)
+            .frame(maxWidth: .infinity)
+            .frame(height: 44)
+            .background(Color.blue)
+            .cornerRadius(10)
+        }
+        .disabled(isSending)
+        .padding(.horizontal, 20)
+        .padding(.bottom, 8)
     }
     
     private var contactITSection: some View {
@@ -340,19 +366,21 @@ struct ContentView: View {
         }
 
         let body: [String: Any] = [
-            "device_id": deviceId,
+            "device_id": locationManager.serialNumber,
             "latitude": locationManager.latitude,
             "longitude": locationManager.longitude,
             "altitude": locationManager.altitude,
             "battery_level": locationManager.batteryLevel,
             "accuracy_meters": 50,
-            "serial_number": locationManager.serialNumber,
-            "email": locationManager.email,
-            "full_name": locationManager.fullName
+//            "serial_number": locationManager.serialNumber,
+//            "email": locationManager.email,
+//            "full_name": locationManager.fullName
         ]
 
         guard let json = try? JSONSerialization.data(withJSONObject: body) else {
-            print("Failed to encode JSON"); return
+            print("Failed to encode JSON");
+            isSending = false
+            return
         }
 
         var req = URLRequest(url: url)
@@ -361,6 +389,7 @@ struct ContentView: View {
         req.httpBody = json
 
         URLSession.shared.dataTask(with: req) { data, resp, err in
+            defer { DispatchQueue.main.async { isSending = false } }
             if let err = err { print("Error: \(err)"); return }
             if let http = resp as? HTTPURLResponse { print("Status Code: \(http.statusCode)") }
             if let data = data, let text = String(data: data, encoding: .utf8) { print("Response: \(text)") }
