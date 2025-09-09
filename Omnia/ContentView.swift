@@ -135,6 +135,7 @@ struct ContentView: View {
     @State private var showDeviceInfo = false
     @StateObject private var locationManager = LocationManager()
     @State private var isSending = false
+    @State private var showRefreshDone = false
 
     // This can change if the app is reinstalled or vendor changes
     private let deviceId = UIDevice.current.identifierForVendor?.uuidString ?? "unknown"
@@ -175,6 +176,11 @@ struct ContentView: View {
         }
         .onAppear {
             if !hasAcceptedTerms { showTerms = true }
+        }
+        .alert("Refreshed", isPresented: $showRefreshDone) {
+            Button("OK", role: .cancel) { }
+        } message: {
+            Text("Location has been sent to the backend.")
         }
         .alert("Terms & Conditions", isPresented: $showTerms) {
             Button("I Agree") {
@@ -243,7 +249,7 @@ struct ContentView: View {
             HStack(spacing: 8) {
                 Image(systemName: "arrow.clockwise.circle.fill")
                     .font(.headline)
-                Text(isSending ? "Refreshing..." : "Refresh / Reconnect")
+                Text(isSending ? "Refreshing..." : "Refresh")
                     .font(.headline)
             }
             .foregroundColor(.white)
@@ -391,7 +397,12 @@ struct ContentView: View {
         URLSession.shared.dataTask(with: req) { data, resp, err in
             defer { DispatchQueue.main.async { isSending = false } }
             if let err = err { print("Error: \(err)"); return }
-            if let http = resp as? HTTPURLResponse { print("Status Code: \(http.statusCode)") }
+            if let http = resp as? HTTPURLResponse {
+                print("Status Code: \(http.statusCode)")
+                if (200...299).contains(http.statusCode) {
+                    DispatchQueue.main.async { showRefreshDone = true }
+                }
+            }
             if let data = data, let text = String(data: data, encoding: .utf8) { print("Response: \(text)") }
         }.resume()
     }
